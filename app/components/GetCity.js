@@ -18,7 +18,7 @@ function InputField (props) {
             className='form-control'
             onChange={props.onUpdateCity}
             type='text'
-            placeholder='Los Angeles, California'
+            placeholder='Hacienda Heights, California'
             value={props.city} />
     );
 }
