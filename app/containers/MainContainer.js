@@ -1,7 +1,6 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
-var PropType = React.PropTypes;
 var GetCityContainer = require('../containers/GetCityContainer');
 
 var styles = {

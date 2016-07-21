@@ -47,4 +47,11 @@ function GetCity (props) {
     )
 }
 
+GetCity.propTypes = {
+    direction: PropTypes.string,
+    onSubmitCity: PropTypes.func.isRequired,
+    onUpdateCity: PropTypes.func.isRequired,
+    city: PropTypes.string.isRequired
+}
+
 module.exports = GetCity;
