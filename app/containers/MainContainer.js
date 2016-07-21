@@ -1,4 +1,6 @@
 var React = require('react');
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
 var PropType = React.PropTypes;
 var GetCityContainer = require('../containers/GetCityContainer');
 
@@ -14,6 +16,10 @@ var styles = {
         background: '#0052cc',
         color: '#fff',
         padding: 5
+    },
+    link: {
+        color: '#fff',
+        textDecoration: 'none'
     }
 }
 
@@ -22,7 +28,9 @@ var MainContainer = React.createClass({
         return (
             <div style={styles.container}>
                 <div style={styles.header}>
-                    <h1 style={{margin: 0, paddingLeft: 20, paddingRight: 20}}>Sora</h1>
+                    <Link to='/' style={styles.link}>
+                        <h1 style={{margin: 0, paddingLeft: 20, paddingRight: 20}}>Sora</h1>
+                    </Link>
                     <GetCityContainer direction='row' />
                 </div>
                 {this.props.children}
