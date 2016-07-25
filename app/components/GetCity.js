@@ -3,10 +3,9 @@ var PropTypes = React.PropTypes;
 
 function Button (props) {
     return (
-        <button type='button'
+        <button type='submit'
             style={{margin: 10}}
-            className='btn btn-success'
-            onClick={props.onSubmitCity}>
+            className='btn btn-success' >
                 {props.children}
         </button>
     );
@@ -40,7 +39,7 @@ function GetCity (props) {
             <InputField
                 onUpdateCity={props.onUpdateCity}
                 city={props.city} />
-            <Button onSubmitCity={props.onSubmitCity}>
+            <Button>
                 Get Weather
             </Button>
         </form>

@@ -29,21 +29,21 @@ function getCurrentWeather (city) {
     
     return axios.get(url)
         .then(function (currentWeatherData) {
-            console.log(currentWeatherData.data);
+            return currentWeatherData.data
         });
 }
 
-function getForcast (city) {
+function getForecast (city) {
     var queryStringData = getQueryStringData(city);
-    var url = prepURL('forcast/daily', queryStringData);
+    var url = prepURL('forecast/daily', queryStringData);
     
     return axios.get(url)
-        .then(function (forcastData) {
-            console.log(forcastData.data);
+        .then(function (forecastData) {
+            return forecastData.data
         });
 }
 
 module.exports = {
     getCurrentWeather: getCurrentWeather,
-    getForcast: getForcast
+    getForecast: getForecast
 };
