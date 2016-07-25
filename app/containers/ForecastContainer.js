@@ -22,7 +22,7 @@ var ForecastContainer = React.createClass({
         getForecast(city)
         .then(function(forecastData) {
             this.setState({
-                isLoading: false,
+                isLoading: true, // set to false when you're done working on Loading.js
                 forecastData: forecastData
             });
         }.bind(this));

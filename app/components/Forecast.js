@@ -1,11 +1,12 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
+var Loading = require('../components/Loading');
 
 function Forecast (props) {
     console.log(props);
     return (
         props.isLoading === true
-        ? <p>LOADING</p>
+        ? <Loading />
         : <div>Hello from Forecast.js</div>
     );
 }
