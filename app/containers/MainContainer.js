@@ -30,7 +30,7 @@ var MainContainer = React.createClass({
                     <Link to='/' style={styles.link}>
                         <h1 style={{margin: 0, paddingLeft: 20, paddingRight: 20}}>Sora</h1>
                     </Link>
-                    <GetCityContainer direction='row' />
+                    <GetCityContainer direction='row' placeHolder='' />
                 </div>
                 {this.props.children}
             </div>

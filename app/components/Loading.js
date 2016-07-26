@@ -11,8 +11,7 @@ var styles = {
         width: '100%'
     },
     header: {
-        fontSize: 60
-    }
+        fontSize: 50    }
 }
 
 var Loading = React.createClass({

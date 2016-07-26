@@ -17,7 +17,7 @@ function InputField (props) {
             className='form-control'
             onChange={props.onUpdateCity}
             type='text'
-            placeholder='Los Angeles, California'
+            placeholder={props.placeHolder}
             value={props.city} />
     );
 }
@@ -38,7 +38,8 @@ function GetCity (props) {
         <form onSubmit={props.onSubmitCity} style={getStyles(props)}>
             <InputField
                 onUpdateCity={props.onUpdateCity}
-                city={props.city} />
+                city={props.city}
+                placeHolder={props.placeHolder} />
             <Button>
                 Get Weather
             </Button>

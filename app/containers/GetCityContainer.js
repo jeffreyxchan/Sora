@@ -8,11 +8,13 @@ var GetCityContainer = React.createClass({
     },
     getDefaultProps: function () {
         return {
-            dierection: 'column'
+            dierection: 'column',
+            placeHolder: 'Los Angeles, California'
         }
     },
     propTypes: {
-        direction: PropTypes.string  
+        direction: PropTypes.string,
+        placeHolder: PropTypes.string
     },
     getInitialState: function () {
         return {
@@ -21,7 +23,11 @@ var GetCityContainer = React.createClass({
     },
     handleSubmitCity: function (e) {
         e.preventDefault();
-        this.context.router.push('/forecast/' + this.state.city);
+        var city = this.state.city;
+        this.setState({
+            city: ''
+        });
+        this.context.router.push('/forecast/' + city);
     },
     handleUpdateCity: function (e) {
         this.setState({
@@ -31,7 +37,8 @@ var GetCityContainer = React.createClass({
     render: function (props) {
         return (
             <GetCity 
-                direction={this.props.direction} 
+                direction={this.props.direction}
+                placeHolder={this.props.placeHolder}
                 onSubmitCity={this.handleSubmitCity}
                 onUpdateCity={this.handleUpdateCity} 
                 city={this.state.city} />
