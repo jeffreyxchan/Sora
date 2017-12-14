@@ -4,6 +4,7 @@
   "description": "reactjs fundamentals curriculum",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --single-quote --print-width=120 --no-semi --write ./**.js ./app/**.js ./app/**/**.js",
     "production": "webpack -p",
     "start": "webpack-dev-server"
   },
@@ -28,6 +29,7 @@
     "babel-loader": "^6.2.4",
     "babel-preset-react": "^6.11.1",
     "html-webpack-plugin": "^2.22.0",
+    "prettier": "^1.9.2",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
